@@ -25,8 +25,6 @@ class Test_Bed_FaceBook(Common_Utilities):
     def __init__(self):
         pass
 
-
-
     def operate_FaceBook(self):
         facebook_csv_log_path = os.path.join(self.logger_csv_path,"FaceBook_log.csv")
         lgr_handle = logger(facebook_csv_log_path,self.config_params.get("debug_level"))
@@ -88,9 +86,7 @@ class Test_Bed_FaceBook(Common_Utilities):
                 self.Press_Device_BackButton()
                 sleep(0.1)
                 i+=1
-            lgr_handle.removeHandler(lgr_handle.handlers[0])           
-
-                
+            lgr_handle.removeHandler(lgr_handle.handlers[0])
         except Exception as e:
             print(str(e))
             print(type(e))

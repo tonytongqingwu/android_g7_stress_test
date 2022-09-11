@@ -15,18 +15,12 @@ from Logger.Dexcom_Logger import logger
 
 from appium.webdriver.common.touch_action import TouchAction
 
-# os.system('color')
-
-
-
-
 
 class Test_Bed_Youtube(Common_Utilities):
     def __init__(self):
         pass
 
-
-    def operate_Youtube(self,dynamic_flag,dynamic_video_play_time):
+    def operate_Youtube(self, dynamic_flag, dynamic_video_play_time):
         youtube_csv_log_path = os.path.join(self.logger_csv_path,"YouTube_log.csv")
         lgr_handle = logger(youtube_csv_log_path,self.config_params.get("debug_level"))
         print("-------------------------------------")
@@ -69,9 +63,9 @@ class Test_Bed_Youtube(Common_Utilities):
                pass     
             #WAIT FOR SOME TIME TO PLAY VIDEO
             if dynamic_flag == True:
-                timeOut=int(dynamic_video_play_time)
+                timeOut = int(dynamic_video_play_time)
             else:
-                timeOut=self.config_params.get("Youtube_Timer")
+                timeOut = self.config_params.get("Youtube_Timer")
             lgr_handle.info("Video will Start playing on YouTube app related to : '"+searchVal+"'"+" for '"+str(timeOut)+"' seconds")
             print("Video will Start playing on YouTube app related to : '"+searchVal+"'"+" for '"+str(timeOut)+"' seconds")
             sleep(timeOut)
