@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-
-
-
-
-
 """
 Modules to be imported for running this script
 """
@@ -16,20 +11,13 @@ from time import sleep
 sys.path.append('../Logger/')
 from Logger.Dexcom_Logger import logger
 
-from appium.webdriver.common.touch_action import TouchAction
-# os.system('color')
-
-
-
-
 
 class Test_Bed_Settings(Common_Utilities):
     def __init__(self):
         pass
 
-
     def open_Settings(self):
-        openSettings_csv_log_path = os.path.join(self.logger_csv_path,"openSettings_log.csv")
+        openSettings_csv_log_path = os.path.join(self.logger_csv_path, "openSettings_log.csv")
         lgr_handle = logger(openSettings_csv_log_path,self.config_params.get("debug_level"))
         print("-------------------------------------")
         print("Open Settings on Mobile Device")

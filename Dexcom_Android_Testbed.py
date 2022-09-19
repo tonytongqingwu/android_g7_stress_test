@@ -655,25 +655,40 @@ class android_testbed(Common_Utilities):
                 print("\033[92mTestbed Loop Completed\033[0m")
                 print("\033[92mTotal Loop count is\033[0m", loop_count)
         elif testbed_scenario == "Dynamic":
-            apps = ['Youtube', 'Youtube Music', 'Camera', 'Chrome', 'GoogleMap', 'MakeCall']
-            
-            while True:
-                app = random.choice(apps)
-                if app == "Youtube":
-                    print("invoke Youtube and play video for: 20 seconds")
-                    Test_Bed_Youtube.operate_Youtube(self, True, 20)
-                elif app == "Camera":
-                    print("Invoke Camera")
-                    Test_Bed_OpenCamera_CapturePhoto.operate_Camera(self)
-                elif app == "Chrome":
-                    print("Invoke Chrome")
-                    Test_Bed_Chrome_Browser.operate_Chrome_Browser(self)
-                elif app == "GoogleMap":
-                    print("Invoke GoogleMap")
-                    Test_Bed_GoogleMaps.operate_GoogleMaps(self)
-                elif app == "Make_Call":
-                    print("Invoke Mobile callinf for: 10 seconds")
-                    Test_Bed_MakeCall_DisconnectCall.operate_Call_on_Mobile(self, True, 10)
+            apps = ['Youtube', 'Youtube Music', 'Camera', 'Chrome', 'GoogleMap', 'MakeCall', 'G7']
+
+            Test_Bed_Contacts.open_Contacts(self)
+            Test_Bed_Settings.open_Settings(self)
+
+            # while True:
+            #     app = random.choice(apps)
+            #     if app == "Youtube":
+            #         print("invoke Youtube and play video for: 20 seconds")
+            #         Test_Bed_Youtube.operate_Youtube(self, True, 20)
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
+            #     elif app == 'Youtube Music':
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
+            #     elif app == "Camera":
+            #         print("Invoke Camera")
+            #         Test_Bed_OpenCamera_CapturePhoto.operate_Camera(self)
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
+            #     elif app == "Chrome":
+            #         print("Invoke Chrome")
+            #         Test_Bed_Chrome_Browser.operate_Chrome_Browser(self)
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
+            #     elif app == "GoogleMap":
+            #         print("Invoke GoogleMap")
+            #         Test_Bed_GoogleMaps.operate_GoogleMaps(self)
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
+            #     elif app == "Make_Call":
+            #         print("Invoke Mobile callinf for: 10 seconds")
+            #         # Test_Bed_MakeCall_DisconnectCall.operate_Call_on_Mobile(self, True, 10)
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
+            #     elif app == "G7":
+            #         Test_Bed_BLE_G7.launch_BLE_G7(self)
+            #         Test_Bed_BLE_G7.g7_settings_alerts(self)
+            #         Test_Bed_BLE_G7.g7_Events_Blood_Glucose(self)
+            #         Test_Bed_YouTubeMusic.operate_YouTubeMusic(self, True, 20)
 
 
             """
