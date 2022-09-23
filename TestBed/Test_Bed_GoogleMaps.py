@@ -63,8 +63,6 @@ class Test_Bed_GoogleMaps(Common_Utilities):
                 sleep(0.1)
                 i += 1
             lgr_handle.removeHandler(lgr_handle.handlers[0])
-
-
         except Exception as e:
             print(str(e))
             print(type(e))

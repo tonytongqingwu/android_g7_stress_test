@@ -657,11 +657,7 @@ class android_testbed(Common_Utilities):
         elif testbed_scenario == "Dynamic":
             APP_CONTACTS = 'Contact'
             APP_SETTINGS = 'Setting'
-            apps = ['Youtube', 'Youtube Music', 'Camera', 'Chrome', 'GoogleMap', 'MakeCall', 'G7',
-                    APP_SETTINGS, APP_CONTACTS]
-
-
-
+            apps = ['Youtube', 'Camera', 'Chrome', 'GoogleMap', 'MakeCall', 'G7', APP_SETTINGS, APP_CONTACTS]
 
             while True:
                 app = random.choice(apps)

@@ -438,7 +438,7 @@ class Common_Utilities:
                 self.Press_Device_Home_Button()
                 sleep(0.2)
 
-    def ScreenShort(self, screenName):
+    def ScreenShot(self, screenName):
         try:
             current_date_and_time = datetime.now()
             time = current_date_and_time.strftime("%Y-%m-%d-%H-%M-%S")
