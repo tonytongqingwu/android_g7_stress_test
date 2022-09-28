@@ -13,7 +13,11 @@ https://github.com/dexcom-inc/TestBed_Android_Python/tags
 2. Connect device and find `adb devices` output for adb id
 3. Run
 `python3 Dexcom_Android_Testbed.py` 
-4. Enter adb id, just click start button.
+4. Enter adb id, and go to application tab, just click submit button.
+
+NOTE: if you have issue of tk error, just run
+
+`brew install python-tk`
 
 ## Plan: will be replaced by VnV own apython package:
 
